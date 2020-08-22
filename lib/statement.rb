@@ -1,7 +1,8 @@
 class Statement
   attr_reader :transactions
 
-  def initialize(input, match_list)
+  def initialize(input, match_list, account_name)
+    @account_name = account_name
     @transactions = []
     parse(input)
     categorise(match_list)
